@@ -48,11 +48,13 @@ cd chat-system
 ```
 
 2. **Docker**
-   Run docker command to download and run the postgress image
-
+```bash
+Run docker command to download and run the postgress image
+```
 3. **Run NPM**
-   npm install
-
+```bash
+npm install
+```
 ## CREATE ENV FILE
 
 - DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE_NAME"
