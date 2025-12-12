@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "a1234567-b890-1234-c567-890d12345678",
+    "name": "Chat-System Subscriptions",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Subscription",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user-123\",\n  \"tier\": \"PRO\",\n  \"billingCycle\": \"MONTHLY\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/subscriptions/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["subscriptions"]
+        }
+      }
+    },
+    {
+      "name": "Cancel Subscription",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/subscriptions/cancel/{{subscriptionId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["subscriptions", "cancel", "{{subscriptionId}}"]
+        }
+      }
+    },
+    {
+      "name": "Ask Chat Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"5f712536-6626-439d-a262-61c8c6ed8748\",\n  \"question\": \"Famous Football Sports?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/chat/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["chat", "ask"]
+        }
+      }
+    }
+  ]
+}
